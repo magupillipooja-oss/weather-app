@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+     
+    <div class="header">
+        <b class="app-name"> Weather App</b>
+        <input class="search-bar" type="text" placeholder="Search your City!">
+        <button id="search-button" class="search-btn"> Search</button>
+
+
+    </div>
+
+     <p id="error-message"></p>
+
+    <div class="container">
+
+        <div class="left-card">
+           <p> Today's Weather </p>
+            <p id="city-name"></p>
+            <i class="fa-solid fa-temperature-half"></i>
+            <p id="temperature"> -- °C</p>
+            <p id="weather-description"></p>
+            <p id="feels-like">Feels like:</p>
+         </div>
+
+         <div class="right-section">
+
+        <div class="small-card">
+            <i class="fas fa-wind"></i>
+            <p id="wind-speed">Wind Status</p>
+        </div>
+
+        <div class="small-card">
+            <i class="fas fa-tint"></i>
+            <p id="humidity">Humidity</p>
+        </div>
+
+        <div class="small-card">
+            <i class="fas fa-weight"></i>
+            <p id="pressure">Pressure</p>
+        </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
