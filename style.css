@@ -259,7 +259,7 @@ canvas{
         flex-wrap: wrap;
     }
     .small-card{
-        flex: 1 1 45%;
+        flex: 1 1 100%;
     }
     .header{
         flex-wrap:wrap;
@@ -268,8 +268,25 @@ canvas{
     .search-bar{
         width: 60%
     }
+    .forecast-day{
+        font-size: 10px;
+        gap: 5px;
+    }
     .forecast-Container{
         font-size: 11px;
+    }
+    .bottom-container{
+        flex-direction: column;
+    }
+    .sun-container{
+        width: 100%
+    }
+    .uv-container{
+        width: 100%
+    }
+    #sunArc {
+        width: 100%;
+        max-width: 200px;
     }
 }
 
