@@ -12,10 +12,14 @@ body, html{
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
+    background-attachment: fixed;
     margin: 0;
     height: 100%;
     font-family: 'Nunito', sans-serif;
+
 }
+
 
 .body::before{
    content: "";
