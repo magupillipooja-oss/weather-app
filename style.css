@@ -269,7 +269,7 @@ canvas{
         width: 60%
     }
     .forecast-day{
-        font-size: 10px;
+        font-size: 15px;
         gap: 5px;
     }
     .forecast-Container{
@@ -281,6 +281,10 @@ canvas{
     .sun-container{
         width: 100%
     }
+    .sunrise, .sunset{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }   
     .uv-container{
         width: 100%
     }
