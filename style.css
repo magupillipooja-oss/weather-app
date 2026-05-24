@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +14,7 @@ body, html{
     min-height: 100vh;
     margin: 0;
     height: 100%;
+    font-family: 'Nunito', sans-serif;
 }
 
 .body::before{
@@ -24,6 +27,22 @@ body, html{
    background-color: rgba(0, 0, 0, 0.7);
    z-index: 0;
 }
+
+.error-banner{
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 150px;
+    transform: translateX(-50%);
+    background: rgba(220,50,50,0.9);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 999;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
 .sun-logo{
     width: 40px;
 }
@@ -31,7 +50,7 @@ body, html{
 .app-name{
     font-size: 40px;
     width: 300px;
-    color: white;
+    color: rgb(5, 6, 83);
     padding-left: 20px;
     font-style: italic;
 }
@@ -53,6 +72,7 @@ body, html{
     opacity: 0.5;
     border: none;
     border-radius: 20px;
+
 }
 .container{
   display: flex;
@@ -81,6 +101,8 @@ body, html{
 
 .left-card{
   flex: 2;
+  display: flex;
+  flex-direction: column;
   min-width: 200px;
   background: rgba(255, 255, 255, 0.15);
  backdrop-filter: blur(10px);
@@ -89,7 +111,32 @@ body, html{
  border-radius: 16px;
  padding: 20px;
  color: rgb(5, 6, 83);
- 
+}
+
+.forecast-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 8px;
+    width: 100%;
+}
+
+.forecast-day{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(5, 6, 83, 0.2);
+    color: rgb(5, 6, 83);  
+}
+
+.forecast-title{
+    font-size: 28px;
+    margin-bottom: 4px;
+    color: rgb(5, 6, 83);
+    font-weight: bold;
 }
 
 .right-section{
@@ -99,3 +146,126 @@ body, html{
   gap: 16px;
   
 }
+
+.city-searched{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.today-weather-title{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.temp-stat{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.feel-like-temp{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.weather-des{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.wind-speed-stat{
+    font-size: 25px;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+
+.wind-gust-stat, .wind-direction{
+     font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.humidity-stat{
+    font-size: 25px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.humidity-message{
+   font-size: 21px;
+    margin-bottom: 5px;
+    margin-top: 5px; 
+}
+
+.pressure-stat{
+    font-size: 25px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.sunrise-set-container{
+    display:flex;
+    align-items: flex-start;
+    margin-top: 50px;
+    gap: 8px;
+    width: 100%;
+}
+
+.sunrise, .sunset{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+canvas{
+    display: block;
+    max-width: 100%;
+}
+
+.bottom-left-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.uvi-container{
+    margin-top: 10px;
+}
+
+.uv-index{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.wind-compass{
+    width: 100%;
+    max-width: 160px;
+    height:auto;
+}
+@media(max-width: 768px){
+    .container{
+        flex-direction: column;
+        position: relative;
+        top: 0;
+        padding: 10px;
+    }
+    .left-card{
+        width: 100%;
+        flex: none;
+    }
+    .right-section{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .small-card{
+        flex: 1 1 45%;
+    }
+    .header{
+        flex-wrap:wrap;
+        padding: 10px;
+    }
+    .search-bar{
+        width: 60%
+    }
+    .forecast-Container{
+        font-size: 11px;
+    }
+}
+

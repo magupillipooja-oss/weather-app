@@ -6,6 +6,7 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
      
@@ -17,34 +18,58 @@
 
     </div>
 
-     <p id="error-message"></p>
+     <p class="error-banner" id="error-message"></p>
 
     <div class="container">
 
         <div class="left-card">
-           <p> Today's Weather </p>
-            <p id="city-name"></p>
-            <i class="fa-solid fa-temperature-half"></i>
-            <p id="temperature"> -- °C</p>
-            <p id="weather-description"></p>
-            <p id="feels-like">Feels like:</p>
+
+           <p class="today-weather-title"> Today's Weather </p>
+            <p class="city-searched" id="city-name"></p>
+            <p class="temp-stat" id="temperature"> -- °C</p>
+            <p class="feel-like-temp" id="feels-like">Feels like: -- °C</p>
+            <p class="weather-des" id="weather-description"></p>
+
+          <div class="forecast-container" id="forecast-container">
+             Forecast
+            </div>
+
+           <div class="bottom-left-container">
+
+            <div class="sunrise-set-container">
+                <i class="fas fa-sun"></i>
+                <p class="sunset" id="sunset"></p>
+                <canvas id="sunArc" width="250" height="150"></canvas>
+                <p class="sunrise" id="sunrise"></p>
+            </div>
+
+            <div class="uvi-container">
+             <p class="uv-index" id="uv-index">UV Index: </p>
+             </div>
+            </div>
+
          </div>
 
          <div class="right-section">
 
         <div class="small-card">
-            <i class="fas fa-wind"></i>
-            <p id="wind-speed">Wind Status</p>
+            <i class="fas fa-wind">  Wind</i>
+            <p class="wind-speed-stat" id="wind-speed">Wind Status</p>
+            <p class="wind-gust-stat" id="wind-gust">Wind Gust</p>
+            <p class="wind-direction" id="wind-direction">wind direction</p>
+            <canvas class="wind-compass" id="windCompass" width="120" height="120"></canvas>
         </div>
 
         <div class="small-card">
-            <i class="fas fa-tint"></i>
-            <p id="humidity">Humidity</p>
+            <i class="fas fa-tint"> Humidity</i>
+            <p class="humidity-stat" id="humidity">Humidity</p>
+            <p class="humidity-message" id="humidity-message"></p>
         </div>
 
         <div class="small-card">
-            <i class="fas fa-weight"></i>
-            <p id="pressure">Pressure</p>
+            <i class="fas fa-weight"> Pressure</i>
+            <p class="pressure-stat" id="pressure">Pressure</p>
+            <p class="pressure-message" id="pressure-message"></p>
         </div>
         </div>
 
